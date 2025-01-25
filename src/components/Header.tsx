@@ -16,6 +16,14 @@ const Header: FC = () => {
                     >
                         Products
                     </NavLink>
+                    <NavLink
+                        className={({ isActive }) =>
+                            isActive ? "active" : "nonactive"
+                        }
+                        to="/cart"
+                    >
+                        Cart
+                    </NavLink>
                 </ul>
                 <div className="">
                     <img src={imgCArt} width={25} height={25} alt="Img" />
