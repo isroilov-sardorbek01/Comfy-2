@@ -26,6 +26,8 @@ const Products: FC = () => {
     }, [curentPage]);
 
     function handleChange(event: React.ChangeEvent<unknown>, page: number) {
+        console.log(event);
+
         setCurrentPage(page);
     }
 
@@ -45,7 +47,7 @@ const Products: FC = () => {
                             return (
                                 <div
                                     onClick={(e) => {
-                                        handleRedirect(e,value.id);
+                                        handleRedirect(e, value.id);
                                     }}
                                     className="product w-[300px]  p-[10px] text-center rounded-xl shadow-lg cursor-pointer hover:shadow-xl transition-[0.5s]"
                                     key={index}
