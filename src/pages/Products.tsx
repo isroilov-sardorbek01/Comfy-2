@@ -2,7 +2,7 @@ import axios from "axios";
 import { FC, useEffect, useState } from "react";
 
 const Products: FC = () => {
-    const [products, setProducts] = useState<any>([]);
+    const [products, setProducts] = useState([]);
 
     useEffect(() => {
         axios
@@ -10,7 +10,6 @@ const Products: FC = () => {
             .then((response) => {
                 if (response.status == 200) {
                     console.log(response);
-
                     setProducts(response.data.data);
                 }
             })
@@ -22,7 +21,7 @@ const Products: FC = () => {
     return (
         <div className="">
             <div className="container products-container flex flex-wrap justify-center gap-5 mb-10">
-                {products.length > 0 ? (
+                {/* {products.length > 0 ? (
                     products.map((value, index) => {
                         return (
                             <div
@@ -41,7 +40,7 @@ const Products: FC = () => {
                     })
                 ) : (
                     <h1 className="load-pr">LOADING</h1>
-                )}
+                )} */}
             </div>
         </div>
     );
